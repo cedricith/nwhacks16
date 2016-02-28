@@ -1,7 +1,7 @@
 # Explore.ly
 A WebVR app using Myo.js to explore Google Streetview in an Oculus Rift with Myo Armband control.
 
-Based on OculusStreetView by troffmo5.
+Based on OculusStreetView by troffmo5 and myo-street-view by theQuazz (Jesse Rogers)
 
 Built at nwHacks 2016.
 
