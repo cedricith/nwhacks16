@@ -56,7 +56,7 @@
 // Parameters
 // ----------------------------------------------
 var QUALITY = 3;
-var DEFAULT_LOCATION = { lat:49.2611,  lng:123.2531 };
+var DEFAULT_LOCATION = { lat:123.2531,  lng:49.2611 };
 var USE_TRACKER = false;
 var GAMEPAD_SPEED = 0.04;
 var DEADZONE = 0.2;
