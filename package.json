@@ -1,0 +1,20 @@
+{
+  "name": "Explore.ly",
+  "version": "1.0.0",
+  "main": "osv.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Cedric Ith, Omar Khan, Akshay Chalana",
+  "license": "MIT",
+  "dependencies": {
+    "events": "^1.0.2",
+    "gulp-watch": "^1.1.0",
+    "lodash": "^2.4.1",
+    "myo": "*"
+  },
+  "devDependencies": {
+    "gulp": "^3.8.9",
+    "gulp-browserify": "*"
+  }
+}
