@@ -1,6 +1,6 @@
 /*
 GSVPano.js - Google Street View Panorama lib
-http://www.clicktorelease.com/code/street/ 
+http://www.clicktorelease.com/code/street/
 
 License
 
@@ -29,7 +29,8 @@ GSVPANO.PanoLoader = function (parameters) {
 		links = [],
 		loading = false,
 		onSizeChange = null,
-		onPanoramaLoad = null;
+		onPanoramaLoad = null,
+		panorama = null;
 
 	this.setProgress = function (p) {
 		if (this.onProgress) {
@@ -129,10 +130,12 @@ GSVPANO.PanoLoader = function (parameters) {
 		self.loading = true;
 		cache = cache || true;
 		if ((typeof location) === 'string') {
-			_panoClient.getPanoramaById(location, function(result, status){self.loadCB(result, status, location, cache)})
+			_panoClient.getPanoramaById(location, function(result, status){self.loadCB(result, status, location, cache)});
+			this.panorama = _panoClient.getPanoramaById(location, function(result, status){self.loadCB(result, status, location, cache)});
 		}
 		else {
-			_panoClient.getPanoramaByLocation(location, 50,  function(result, status){self.loadCB(result, status, location, cache);})
+			_panoClient.getPanoramaByLocation(location, 50,  function(result, status){self.loadCB(result, status, location, cache);});
+			this.panorama = _panoClient.getPanoramaByLocation(location, 50,  function(result, status){self.loadCB(result, status, location, cache);});
 		}
 	};
 

@@ -10,8 +10,6 @@
  var _            = require('lodash');
  var EventEmitter = require('events').EventEmitter;
 
- require('myo/experimental/myo.experimental');
-
  var m = myo.create();
  var initial = null;
 

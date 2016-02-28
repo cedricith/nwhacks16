@@ -47,12 +47,13 @@ MyoMapExplorer.prototype.setMyoEmitter = function(emitter) {
 };
 
 MyoMapExplorer.prototype.moveForward = function() {
-  var pov   = this.panorama.getPov();
-  var links = this.panorama.getLinks();
+  // var pov   = this.panorama.getPov();
+  var heading = currHeading;
+  var links = panoLoader.panorama.getLinks();
   var best  = {diff: 0, link: null};
 
   for (var i in links) {
-    var diff = (links[i].heading - pov.heading) % 360;
+    var diff = (links[i].heading - heading) % 360;
     if (diff < 0) diff += 360;
     if (diff > 180) diff = 360 - diff;
     if (diff < 45) {
@@ -62,7 +63,8 @@ MyoMapExplorer.prototype.moveForward = function() {
     }
   }
 
-  if (best.link) this.panorama.setPano(best.link.pano);
+  // if (best.link) this.panorama.setPano(best.link.pano);
+  if (best.link) panoLoader.load(best.link.pano);
 };
 
 MyoMapExplorer.prototype.moveBackward = function() {
