@@ -8,10 +8,14 @@
   "author": "Cedric Ith, Omar Khan, Akshay Chalana",
   "license": "MIT",
   "dependencies": {
+    "basejs": "*",
+    "browserify": "^13.0.0",
     "events": "^1.0.2",
     "gulp-watch": "^1.1.0",
     "lodash": "^4.0.0",
-    "myo": "*"
+    "myo": "*",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0"
   },
   "devDependencies": {
     "gulp": "^3.8.9",
